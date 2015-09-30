@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#2B3D53">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="KOLOROB"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="60dp"
+        android:textColor="#009a9a"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Email"
+        android:textColorHint="#ff14756c"
+        android:drawableLeft="@drawable/user"
+        android:background="#d2d2d2"
+        android:textColor="#ff133058"
+        android:textSize="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:inputType="textEmailAddress"
+        android:typeface="serif" />
+    <EditText
+        android:id="@+id/etPass"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#d2d2d2"
+        android:padding="10dp"
+        android:hint="Password"
+        android:textColorHint="#ff14756c"
+        android:password="true"
+        android:drawableLeft="@drawable/password"
+        android:textColor="#ff133058"
+        android:textSize="20dp"
+        android:layout_below="@+id/etEmail"
+        android:layout_alignLeft="@+id/etEmail"
+        android:layout_alignStart="@+id/etEmail"
+        android:layout_marginTop="10dp"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Log in"
+        android:background="@drawable/button_design"
+        android:textColor="#d2d2d2"
+        android:textSize="20dp"
+        android:layout_below="@+id/etPass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:typeface="serif"
+        android:onClick="onClickSignIn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#009a9a"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:onClick="onClickRegistration" />
+</RelativeLayout>
