@@ -13,7 +13,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="KOLOROB"
         android:id="@+id/textView3"
-        android:textSize="60dp"
+        android:textSize="55dp"
         android:textColor="#009a9a"
         android:textStyle="bold"
         android:typeface="serif"
@@ -29,7 +29,7 @@
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:textColor="#009a9a"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:typeface="serif"
         android:textStyle="italic" />
 
@@ -44,7 +44,7 @@
         android:hint="Email Address"
         android:layout_below="@+id/textView4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="10dp"
         android:typeface="serif" />
 
     <EditText
@@ -113,9 +113,9 @@
         android:textColor="#d2d2d2"
         android:textSize="20dp"
         android:typeface="serif"
+        android:onClick="onClickSignUp"
         android:layout_below="@+id/radioGroup"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:onClick="onClickSignUp" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
