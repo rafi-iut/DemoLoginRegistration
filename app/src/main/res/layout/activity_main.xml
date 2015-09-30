@@ -14,7 +14,7 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textSize="60dp"
+        android:textSize="55dp"
         android:textColor="#009a9a"
         android:layout_marginTop="10dp"
         android:textStyle="bold"
@@ -79,5 +79,7 @@
         android:textSize="30dp"
         android:textStyle="bold"
         android:typeface="serif"
-        android:onClick="onClickRegistration" />
+        android:onClick="onClickRegistration"
+        android:focusable="true"
+        android:clickable="true" />
 </RelativeLayout>
