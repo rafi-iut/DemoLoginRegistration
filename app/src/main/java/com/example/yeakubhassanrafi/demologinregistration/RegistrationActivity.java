@@ -12,7 +12,6 @@ package com.example.yeakubhassanrafi.demologinregistration;
 
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,6 +24,9 @@ import android.widget.Toast;
 
 
 public class RegistrationActivity extends Activity {
+
+    //global variable name starts with g
+    //local variable name starts with l
 
     EditText g_email_address;
     EditText g_password;
@@ -39,8 +41,10 @@ public class RegistrationActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration);
-        initialization();
+        initialization();//initialize all button, textView, radio group
     }
+
+    //onclick action for sign up button
     public void onClickSignUp(View v)
     {
         SQLiteDatabase l_database = openOrCreateDatabase("kolorob",MODE_PRIVATE,null);
@@ -67,7 +71,7 @@ public class RegistrationActivity extends Activity {
 
             Toast.makeText(getApplicationContext(), "Registration Successful !!", Toast.LENGTH_LONG).show();
 
-            finish();
+            finish();//finish this activity
         }
 
         l_database.close();
@@ -111,6 +115,6 @@ public class RegistrationActivity extends Activity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
+        finish(); //finish this activity
     }
 }

@@ -14,7 +14,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,9 +23,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+//Login activity
 
 public class MainActivity extends Activity {
 
+
+    //global variable name starts with g
+    //local variable name starts with l
 
     EditText g_email_address;
     EditText g_password;
@@ -39,7 +42,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initialization();
+
+        initialization();//initialize all button, textView, radio group
+
     }
 
     public void initialization()
@@ -52,9 +57,10 @@ public class MainActivity extends Activity {
         g_registration = (TextView) findViewById(R.id.textView2);
     }
 
+    //onclick action for sign in button
     public void onClickSignIn(View v)
     {
-        SQLiteDatabase l_database = openOrCreateDatabase("kolorob",MODE_PRIVATE,null);
+        SQLiteDatabase l_database = openOrCreateDatabase("kolorob",MODE_PRIVATE,null); //creating database
         l_database.execSQL("CREATE TABLE IF NOT EXISTS UserInformation (email VARCHAR, password VARCHAR, age VARCHAR, sex VARCHAR);");
 
         Cursor l_match_username_password_cursor = l_database.rawQuery(String.format("SELECT * FROM UserInformation WHERE email = '%s' AND password = '%s'",
@@ -65,6 +71,8 @@ public class MainActivity extends Activity {
         }
         l_database.close();
     }
+
+    //onclick action for registration textView
     public void onClickRegistration(View v)
     {
         Intent intent = new Intent(MainActivity.this,RegistrationActivity.class);
